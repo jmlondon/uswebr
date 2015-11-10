@@ -188,6 +188,7 @@ $for(include-after)$
 $include-after$
 $endfor$
 
+$if(agency-footer)$
 <footer class="usa-footer usa-footer-slim usa-sans" role="contentinfo">
     <div class="usa-grid usa-footer-return-to-top">
       <a href="#">Return to top</a>
@@ -196,9 +197,6 @@ $endfor$
       <div class="usa-grid-full">
         <nav class="usa-footer-nav usa-width-one-half">
           <ul class="usa-unstyled-list">
-            <li class="usa-width-one-half usa-footer-primary-content">
-              <a class="usa-footer-primary-link" href="#">Polar Ecosystems Program</a>
-            </li>
             <li class="usa-width-one-half usa-footer-primary-content">
               <a class="usa-footer-primary-link" href="#">Alaska Fisheries Science Center</a>
             </li>
@@ -226,6 +224,7 @@ $endfor$
   </footer>
   </div>
 </div>
+$endif$
 $if(mathjax-url)$
 <script>
 (function () {

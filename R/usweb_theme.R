@@ -6,10 +6,13 @@
 #' @return ggplot2 theme
 #' @export
 usweb_theme <- function() {
+
+  font_dir <- system.file("fonts",package="uswebr")
+
   sysfonts::font.add("Source Sans Pro",
-           regular="Source Sans Pro regular.ttf",
-           bold="Source Sans Pro 600.ttf",
-           italic="Source Sans Pro italic.ttf"
+           regular=paste(font_dir,"Source_Sans_Pro","SourceSansPro-Regular.ttf",sep="/"),
+           bold=paste(font_dir,"Source_Sans_Pro","SourceSansPro-Semibold.ttf",sep="/"),
+           italic=paste(font_dir,"Source_Sans_Pro","SourceSansPro-Italic.ttf",sep="/")
   )
   showtext::showtext.auto()
 
