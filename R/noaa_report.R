@@ -8,6 +8,7 @@
 #' @export
 noaa_report <- function(toc = FALSE,
                         css = NULL,
+                        fig_width = 8,
                         ...) {
 
   create_header = function() {
@@ -97,6 +98,7 @@ noaa_report <- function(toc = FALSE,
     theme = NULL,
     css = css,
     keep_md = TRUE,
+    fig_width = fig_width,
     self_contained = TRUE,
     template = system.file("rmarkdown", "templates", "usweb", 'template.html',
                            package = 'uswebr'),

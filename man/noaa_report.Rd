@@ -4,7 +4,7 @@
 \alias{noaa_report}
 \title{Output a NOAA report.}
 \usage{
-noaa_report(toc = FALSE, css = NULL, ...)
+noaa_report(toc = FALSE, css = NULL, fig_width = 8, ...)
 }
 \value{
 R Markdown output format to pass to \code{\link{render}}
