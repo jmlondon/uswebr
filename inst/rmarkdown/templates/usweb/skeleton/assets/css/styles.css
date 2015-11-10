@@ -1,0 +1,116 @@
+.usa-grid {
+  max-width: 88ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.usa-accordion button:focus,
+.usa-accordion-bordered button:focus {
+    box-shadow: none;
+}
+
+.usa-accordion-content {
+  padding: 1rem;
+}
+
+.usa-alert.usa-alert-info {
+  margin-bottom: 6rem;
+}
+
+.usa-alert.usa-alert-warning .usa-alert-text {
+  font-size: 92%;
+}
+
+tt, code, pre {
+   font-family: 'Source Code Pro', monospace;
+   font-size: 92%;
+}
+
+pre {
+  overflow-x: auto;
+  margin-bottom: 0;
+}
+
+pre code {
+   display: block;
+   padding: 0.5em;
+}
+
+.sourceCode + pre {
+   margin-top: 0.5em;
+}
+
+code {
+  border: 1px solid #dce4ef;
+  border-radius: 3px;
+  line-height: 1.35em;
+}
+
+p code {
+  border: 0;
+  background-color: #f1f1f1;
+  border-radius: 1px;
+}
+
+code[class] {
+  background-color: #f1f1f1;
+}
+
+.title {
+  border-bottom: 2px solid #323a45;
+}
+
+.author {
+  padding-bottom: 1em;
+}
+
+.subtitle {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  color: #5b616b;
+}
+
+.compile-date {
+  position: relative;
+  top: 0;
+  color: #5b616b;
+  background-color: #efefef;
+  width: 60%;
+  height: 1.4em;
+  font-size: 92%;
+  text-align: right;
+  float: right;
+}
+
+.author-afil
+ {
+  font-size: 92%;
+}
+
+address p {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+table {
+  display: block;
+}
+
+table td, table th {
+    font-size: 90%;
+}
+
+footer {
+  font-size: 82%;
+}
+
+.usa-footer-slim-logo-img {
+  float: left;
+  max-width: 6rem;
+}
+
+.usa-footer-slim-logo-heading {
+  padding-left: 1.5rem;
+  padding-top: 0;
+}
+
