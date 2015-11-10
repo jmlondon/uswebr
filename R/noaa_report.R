@@ -6,22 +6,108 @@
 #'
 #' @return R Markdown output format to pass to \code{\link{render}}
 #' @export
-noaa_report <- function(toc = FALSE) {
-  # call the base html_document function
-  base_path <- 'rmarkdown/templates/usweb'
-  agency_logo_path <- system.file(paste(base_path,'skeleton',
-                                        'assets/logo/noaa-fisheries-rgb-stacked.png',
-                                        sep='/'),package='uswebr')
+noaa_report <- function(toc = FALSE,
+                        css = NULL,
+                        ...) {
+
+  create_header = function() {
+    js = system.file(
+      "rmarkdown",
+      "templates",
+      "usweb",
+      "skeleton",
+      "assets",
+      "js",
+      "components.js",
+      package = "uswebr"
+    )
+    jquery = system.file(
+      "rmarkdown",
+      "templates",
+      "usweb",
+      "skeleton",
+      "assets",
+      "js",
+      "vendor",
+      "jquery-1.11.3.min.js",
+      package = "uswebr"
+    )
+
+    output = paste(
+      '<script language="JavaScript" src="',
+      jquery,
+      '"></script>\n',
+      '<script language="JavaScript" src="',
+      js,
+      '"></script>\n',
+      sep = ""
+    )
+
+    outfile = paste(tempdir(), 'usweb_includes.html', sep = '/')
+    cat(output, file = outfile)
+    invisible(outfile)
+  }
+
+  if (is.null(css)) {
+    css <-
+      c(
+        system.file(
+          "rmarkdown",
+          "templates",
+          "usweb" ,
+          "skeleton",
+          "assets",
+          "css",
+          "main.css",
+          package = "uswebr"
+        ),
+        system.file(
+          "rmarkdown",
+          "templates",
+          "usweb" ,
+          "skeleton",
+          "assets",
+          "css",
+          "google-fonts.css",
+          package = "uswebr"
+        ),
+        system.file(
+          "rmarkdown",
+          "templates",
+          "usweb" ,
+          "skeleton",
+          "assets",
+          "css",
+          "styles.css",
+          package = "uswebr"
+        )
+      )
+  }
+
+  agency_logo_path <-
+    system.file(
+      "rmarkdown",
+      "templates",
+      "usweb",
+      "skeleton",
+      "assets",
+      "noaa-fisheries-rgb-stacked.png",
+      package = 'uswebr'
+    )
+
   rmarkdown::html_document(
     toc = toc,
-    fig_width = 8,
     theme = NULL,
+    css = css,
     keep_md = TRUE,
     self_contained = TRUE,
-    template = system.file(paste(base_path,'template.html',sep='/'),
+    template = system.file("rmarkdown", "templates", "usweb", 'template.html',
                            package = 'uswebr'),
-    includes = rmarkdown::includes(in_header = uswebr::create_header()),
-    pandoc_args = c("--variable=mathjax-url",
-                    paste0("--variable=agency-logo:",agency_logo_path))
+    includes = rmarkdown::includes(in_header = create_header()),
+    pandoc_args = c(
+      "--variable=mathjax-url",
+      paste0("--variable=agency-logo:", agency_logo_path)
+    ),
+    ...
   )
 }

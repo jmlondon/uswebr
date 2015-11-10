@@ -150,14 +150,14 @@ $if(address)$
         </button>
         <div id="collapsible-0" class="usa-accordion-content" style="display:none;">
         <div class="author-afil">
-        $for(address)$
         <ol id="address-list">
+          $for(address)$
             <li data-id="$address.code$">$address.address$
             $if(address.email)$<br />$address.email$$endif$
 			      $if(address.orcid)$<br /><a href='http://$address.orcid$'>$address.orcid$</a>$endif$
 			      </li>
+			   $endfor$
         </ol>
-        $endfor$
         </div>
         </div>
       </div>
