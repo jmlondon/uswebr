@@ -1,10 +1,13 @@
 Package: uswebr
 Type: Package
-Title: Colors, Styles and Palettes Based on the U.S. Web Design Standards
+Title: RMarkdown template and ggplot2 theme based on the U.S. Web Design Standards
 Version: 0.0.0.9000
 Authors@R: person("Josh", "London", email = "josh.london@noaa.gov", role = c("aut", "cre"))
 Date: 2015-10-06
-Description: see https://playbook.cio.gov/designstandards/getting-started/
+Description: Rmarkdown template based on the U.S. Web Design Standards
+    (https://playbook.cio.gov/designstandards/getting-started/) and customized
+    for NOAA Fisheries and the Alaska Fisheries Science Center. Also includes
+    a ggplot2 theme
 Depends:
     R (>= 3.2.0),
     ggplot2 (>= 1.0.0)
