@@ -46,14 +46,14 @@ usweb_theme <- function() {
 
     # Set title and axis labels, and format these and tick marks
       plot.title=element_text(color=color.title,
-                                  size=16, vjust=1.5,lineheight=0.9,
+                                  size=16, vjust=2,lineheight=0.9,
                                   face="bold"),
       axis.text.x=element_text(size=10,color=color.axis.text),
       axis.text.y=element_text(size=10,color=color.axis.text),
-      axis.title.x=element_text(size=12,color=color.axis.title, vjust=0),
-      axis.title.y=element_text(size=12,color=color.axis.title, vjust=1.25),
+      axis.title.x=element_text(size=12,color=color.axis.title, vjust=-1),
+      axis.title.y=element_text(size=12,color=color.axis.title, vjust=2),
 
     # Plot margins
-    plot.margin = grid::unit(c(0.5, 0.35, 0.45, 0.5), "cm")
+    plot.margin = grid::unit(c(0.75, 0.35, 0.5, 1), "cm")
     )
 }
