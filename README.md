@@ -18,31 +18,29 @@ Example yaml header
 -------------------
 
     ---
-    title: "My Scientific Report"
-    subtitle: "AFSC science is awesome"
+    title: "Report Title"
+    subtitle: "report subtitle"
     draft: true
     author:
-    - name: First Author
+    - name: First A. Author
       affiliation: 1
-    - name: Second Author
+    - name: Second A. Author
       affiliation: 2
     address:
     - code: 1
-      address: Alaska Fisheries Science Center, NOAA Fisheries, Seattle, Washington, USA 
+      address: Division, Agency, City, State, Country 
       email: first.author@noaa.gov
-      orcid: orcid.org/0000-1111-2222-3333
+      orcid: orcid.org/0000-0000-0000-0000
     - code: 2
-      address: Alaska Fisheries Science Center, NOAA Fisheries, Seattle, Washington, USA 
+      address: Division, Agency, City, State, Country 
       email: second.author@noaa.gov
-      orcid: orcid.org/4444-5555-6666-7777
     date: "13 January, 2016"
     disclaimer: >
       The scientific results and conclusions, as well as any views or opinions 
       expressed herein, are those of the author(s) and do not necessarily reflect 
       those of NOAA or the Department of Commerce.
-    agency-footer: true
     abstract: >
-      Morbi ipsum velit, sodales sed lectus vitae, pellentesque ultricies nibh. Nullam egestas tempor eros, ut rhoncus diam tincidunt et. Aliquam erat volutpat. Pellentesque consectetur turpis ut purus volutpat facilisis. Cras pharetra, nibh vel ornare pulvinar, justo enim varius felis, ac efficitur mi est pharetra lacus. Phasellus lobortis facilisis augue et tincidunt. Donec sapien dui, elementum nec magna vel, convallis congue metus. Nulla sollicitudin, enim vel euismod venenatis, dolor eros convallis lacus, at aliquam sem magna a ante. Cras rhoncus lacus ac posuere vehicula. Curabitur bibendum, elit a congue lobortis, justo diam fermentum nunc, tempor egestas felis nisl a lectus. Sed elementum est nunc, nec tincidunt nisl pharetra et. Ut libero enim, aliquet vel metus sit amet, pharetra volutpat justo. Praesent id metus a nisl condimentum feugiat.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nunc enim, accumsan vel ante a, faucibus convallis lorem. Quisque sit amet tellus molestie, eleifend justo eu, dapibus diam. Suspendisse suscipit neque id sapien semper fermentum ac nec dui. Maecenas porttitor ligula ligula, a laoreet ex congue sed. Mauris in egestas elit. Curabitur ut tellus vel lacus maximus elementum. Cras et bibendum libero, nec pellentesque risus. Integer suscipit sodales nulla, ullamcorper faucibus erat aliquet et. Donec condimentum nisl at enim gravida consectetur. Sed luctus eleifend lorem, quis tempor nisi lacinia at. Quisque sodales semper orci, eu aliquam enim sagittis eget.
     output:
       html_document:
         uswebr::noaa_report
