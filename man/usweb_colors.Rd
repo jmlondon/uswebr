@@ -32,9 +32,9 @@ and the colorblind-safe palette proposed by Okabe and Ito
 library("ggplot2")
 library(scales)
 show_col(usweb_pal()(7))
-p <- ggplot(mtcars) + geom_point(aes(x = wt, y = mpg,
-     colour=factor(gear))) + facet_wrap(~am)
-p + theme_igray() + scale_colour_usweb()
+p <- ggplot(mpg, aes(class))
+p + geom_bar(aes(fill=drv))
+p + geom_bar(aes(fill=drv)) + uswebr_theme() + scale_fill_usweb()
 }
 \references{
 \url{http://jfly.iam.u-tokyo.ac.jp/color}

@@ -16,13 +16,17 @@
 #' library("ggplot2")
 #' library(scales)
 #' show_col(usweb_pal()(7))
-#' p <- ggplot(mtcars) + geom_point(aes(x = wt, y = mpg,
-#'      colour=factor(gear))) + facet_wrap(~am)
-#' p + theme_igray() + scale_colour_usweb()
+#' p <- ggplot(mpg, aes(class))
+#' p + geom_bar(aes(fill=drv))
+#' p + geom_bar(aes(fill=drv)) + uswebr_theme() + scale_fill_usweb()
+#'
+#' p <- ggplot(diamonds, aes(clarity, fill=cut))
+#' p + geom_bar()
+#' p + geom_bar() + usweb_theme() + scale_fill_usweb()
 
 #' @rdname usweb_colors
 #' @export
-usweb_main <- c(blue="#0072B2",
+usweb_main <- c(primary_blue="#0071BC",
                  vermillion="#D55E00",
                  bluish_green="#009E73",
                  reddish_purple="#CC79A7",
