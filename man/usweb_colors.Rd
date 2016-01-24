@@ -34,7 +34,11 @@ library(scales)
 show_col(usweb_pal()(7))
 p <- ggplot(mpg, aes(class))
 p + geom_bar(aes(fill=drv))
-p + geom_bar(aes(fill=drv)) + uswebr_theme() + scale_fill_usweb()
+p + geom_bar(aes(fill=drv)) + usweb_theme() + scale_fill_usweb()
+
+p <- ggplot(diamonds, aes(clarity, fill=cut))
+p + geom_bar()
+p + geom_bar() + usweb_theme() + scale_fill_usweb()
 }
 \references{
 \url{http://jfly.iam.u-tokyo.ac.jp/color}
