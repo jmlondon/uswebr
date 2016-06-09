@@ -19,25 +19,10 @@ noaa_report <- function(toc = FALSE,
       "resources",
       "designstandards",
       "js",
-      "components.js",
+      "uswds.min.js",
       package = "uswebr"
     )
-    jquery = system.file(
-      "rmarkdown",
-      "templates",
-      "usweb",
-      "resources",
-      "designstandards",
-      "js",
-      "vendor",
-      "jquery-1.11.3.min.js",
-      package = "uswebr"
-    )
-
     output = paste(
-      '<script language="JavaScript" src="',
-      jquery,
-      '"></script>\n',
       '<script language="JavaScript" src="',
       js,
       '"></script>\n',
@@ -59,17 +44,7 @@ noaa_report <- function(toc = FALSE,
           "resources",
           "designstandards",
           "css",
-          "main.css",
-          package = "uswebr"
-        ),
-        system.file(
-          "rmarkdown",
-          "templates",
-          "usweb" ,
-          "resources",
-          "designstandards",
-          "css",
-          "google-fonts.css",
+          "uswds.min.css",
           package = "uswebr"
         ),
         system.file(

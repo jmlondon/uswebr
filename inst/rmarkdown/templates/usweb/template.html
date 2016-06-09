@@ -143,13 +143,14 @@ $endif$
     </h3>
 
 $if(address)$
-<div class="usa-accordion">
 <div class="usa-accordion-bordered">
-        <button class="usa-button-unstyled" id="afil-button">
+    <ul class="usa-unstyled-list">
+      <li>
+        <button class="usa-button-unstyled" aria-expanded="false" aria-controls="afil-b-1">
           Author Affiliation(s)
         </button>
-        <div id="collapsible-0" class="usa-accordion-content" style="display:none;">
-        <div class="author-afil">
+        <div id="afil-b-1" class="usa-accordion-content">
+          <div class="author-afil">
         <ol id="address-list">
           $for(address)$
             <li data-id="$address.code$">$address.address$
@@ -160,8 +161,9 @@ $if(address)$
         </ol>
         </div>
         </div>
-      </div>
-      </div>
+      </li>
+    </ul>
+</div>
 $endif$
 $endif$
 
