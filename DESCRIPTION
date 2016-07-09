@@ -1,22 +1,17 @@
 Package: uswebr
 Type: Package
-Title: RMarkdown template and ggplot2 theme based on the U.S. Web Design Standards
+Title: RMarkdown template based on the U.S. Web Design Standards
 Version: 0.0.0.9000
 Authors@R: person("Josh", "London", email = "josh.london@noaa.gov", role = c("aut", "cre"))
 Date: 2015-10-06
 Description: Rmarkdown template based on the U.S. Web Design Standards
     (https://playbook.cio.gov/designstandards/getting-started/) and customized
-    for NOAA Fisheries and the Alaska Fisheries Science Center. Also includes
-    a ggplot2 theme
+    for NOAA Fisheries and the Alaska Fisheries Science Center.
 Depends:
-    R (>= 3.2.0),
-    ggplot2 (>= 1.0.0)
+    R (>= 3.2.0)
 Imports:
-    sysfonts,
-    showtext,
     rmarkdown,
     knitr,
-    scales
-License: file LICENSE
+License: CC0 + file LICENSE
 LazyData: TRUE
 RoxygenNote: 5.0.1

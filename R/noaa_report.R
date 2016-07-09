@@ -1,7 +1,7 @@
 #' Output a NOAA report.
 #'
 #' A NOAA report is a version of html_document with support for NOAA
-#' colors, logos and based on the US Web Design Standards
+#' logos and based on the US Web Design Standards
 #'
 #'
 #' @return R Markdown output format to pass to \code{\link{render}}
@@ -10,6 +10,8 @@ noaa_report <- function(toc = FALSE,
                         css = NULL,
                         fig_width = 8,
                         ...) {
+  template = system.file("rmarkdown", "templates", "usweb", 'template.html',
+                         package = 'uswebr')
 
   create_header = function() {
     js = system.file(
@@ -17,7 +19,7 @@ noaa_report <- function(toc = FALSE,
       "templates",
       "usweb",
       "resources",
-      "designstandards",
+      "uswds-0.9.5",
       "js",
       "uswds.min.js",
       package = "uswebr"
@@ -42,7 +44,7 @@ noaa_report <- function(toc = FALSE,
           "templates",
           "usweb" ,
           "resources",
-          "designstandards",
+          "uswds-0.9.5",
           "css",
           "uswds.min.css",
           package = "uswebr"
@@ -68,20 +70,22 @@ noaa_report <- function(toc = FALSE,
       package = 'uswebr'
     )
 
-  rmarkdown::html_document(
+  base_format <- rmarkdown::html_document(
     toc = toc,
     theme = NULL,
     css = css,
     keep_md = TRUE,
     fig_width = fig_width,
     self_contained = TRUE,
-    template = system.file("rmarkdown", "templates", "usweb", 'template.html',
-                           package = 'uswebr'),
     includes = rmarkdown::includes(in_header = create_header()),
     pandoc_args = c(
-      "--variable=mathjax-url",
       paste0("--variable=agency-logo:", agency_logo_path)
     ),
     ...
   )
+
+  template_arg <- which(base_format$pandoc$args == "--template") + 1L
+  base_format$pandoc$args[template_arg] <- template
+
+  base_format
 }

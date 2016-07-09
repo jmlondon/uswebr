@@ -234,7 +234,7 @@ $if(mathjax-url)$
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "$mathjax-url$";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>

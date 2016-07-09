@@ -11,6 +11,6 @@ R Markdown output format to pass to \code{\link{render}}
 }
 \description{
 A NOAA report is a version of html_document with support for NOAA
-colors, logos and based on the US Web Design Standards
+logos and based on the US Web Design Standards
 }
 
