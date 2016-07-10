@@ -11,7 +11,7 @@ Depends:
     R (>= 3.3.0)
 Imports:
     rmarkdown,
-    knitr,
+    knitr
 License: CC0 + file LICENSE
 LazyData: TRUE
 RoxygenNote: 5.0.1
