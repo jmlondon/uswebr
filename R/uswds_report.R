@@ -1,12 +1,12 @@
-#' Output a NOAA report.
+#' Output a USWDS scientific report.
 #'
-#' A NOAA report is a version of html_document with support for NOAA
-#' logos and based on the US Web Design Standards
+#' A USWDS report is a version of html_document with support for scientific
+#' reports and based on the US Web Design Standards
 #'
 #'
 #' @return R Markdown output format to pass to \code{\link{render}}
 #' @export
-noaa_report <- function(toc = FALSE,
+uswds_report <- function(toc = FALSE,
                         css = NULL,
                         fig_width = 8,
                         ...) {
@@ -19,7 +19,7 @@ noaa_report <- function(toc = FALSE,
       "templates",
       "usweb",
       "resources",
-      "uswds-0.9.5",
+      "uswds-0.10.0",
       "js",
       "uswds.min.js",
       package = "uswebr"
@@ -44,7 +44,7 @@ noaa_report <- function(toc = FALSE,
           "templates",
           "usweb" ,
           "resources",
-          "uswds-0.9.5",
+          "uswds-0.10.0",
           "css",
           "uswds.min.css",
           package = "uswebr"
