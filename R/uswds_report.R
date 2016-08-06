@@ -7,10 +7,20 @@
 #' @return R Markdown output format to pass to \code{\link{render}}
 #' @export
 uswds_report <- function(toc = FALSE,
-                        css = NULL,
-                        fig_width = 8,
-                        ...) {
-  template = system.file("rmarkdown", "templates", "usweb", 'template.html',
+                         css = NULL,
+                         fig_width = 8,
+                         ...) {
+  uswebr:::load_fonts()
+  ggplot2::theme_set(ggplot2::theme_grey(
+    base_family = "Source Sans Pro") +
+      ggplot2::theme(plot.title =
+                       ggplot2::element_text(
+                         family = "Merriweather")))
+
+  template = system.file("rmarkdown",
+                         "templates",
+                         "usweb",
+                         "template.html",
                          package = 'uswebr')
 
   create_header = function() {
@@ -24,12 +34,10 @@ uswds_report <- function(toc = FALSE,
       "uswds.min.js",
       package = "uswebr"
     )
-    output = paste(
-      '<script language="JavaScript" src="',
-      js,
-      '"></script>\n',
-      sep = ""
-    )
+    output = paste('<script language="JavaScript" src="',
+                   js,
+                   '"></script>\n',
+                   sep = "")
 
     outfile = paste(tempdir(), 'usweb_includes.html', sep = '/')
     cat(output, file = outfile)
@@ -78,13 +86,14 @@ uswds_report <- function(toc = FALSE,
     fig_width = fig_width,
     self_contained = TRUE,
     includes = rmarkdown::includes(in_header = create_header()),
-    pandoc_args = c(
-      paste0("--variable=agency-logo:", agency_logo_path)
-    ),
+    pandoc_args = c(paste0(
+      "--variable=agency-logo:", agency_logo_path
+    )),
     ...
   )
 
-  template_arg <- which(base_format$pandoc$args == "--template") + 1L
+  template_arg <-
+    which(base_format$pandoc$args == "--template") + 1L
   base_format$pandoc$args[template_arg] <- template
 
   base_format

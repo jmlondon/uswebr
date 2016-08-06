@@ -10,7 +10,17 @@ uswds_report <- function(toc = FALSE,
                          css = NULL,
                          fig_width = 6,
                          ...) {
-  template = system.file("rmarkdown", "templates", "usweb", 'vignette.html',
+  uswebr:::load_fonts()
+  ggplot2::theme_set(ggplot2::theme_grey(
+    base_family = "Source Sans Pro") +
+      ggplot2::theme(plot.title =
+                       ggplot2::element_text(
+                         family = "Merriweather")))
+
+  template = system.file("rmarkdown",
+                         "templates",
+                         "usweb",
+                         "vignette.html",
                          package = 'uswebr')
 
   if (is.null(css)) {
@@ -47,7 +57,8 @@ uswds_report <- function(toc = FALSE,
     ...
   )
 
-  template_arg <- which(base_format$pandoc$args == "--template") + 1L
+  template_arg <-
+    which(base_format$pandoc$args == "--template") + 1L
   base_format$pandoc$args[template_arg] <- template
 
   base_format
