@@ -6,7 +6,7 @@
 #'
 #' @return R Markdown output format to pass to \code{\link{render}}
 #' @export
-uswds_report <- function(toc = FALSE,
+uswds_vignette <- function(toc = FALSE,
                          css = NULL,
                          fig_width = 6,
                          ...) {
