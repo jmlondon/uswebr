@@ -13,7 +13,8 @@ Imports:
     rmarkdown,
     knitr,
     sysfonts,
-    showtext
+    showtext,
+    showtextdb
 License: CC0 | file LICENSE
 LazyData: TRUE
 RoxygenNote: 5.0.1
