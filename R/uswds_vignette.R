@@ -31,7 +31,7 @@ uswds_vignette <- function(toc = FALSE,
           "templates",
           "usweb" ,
           "resources",
-          "uswds-0.10.0",
+          "uswds-0.11.0",
           "css",
           "uswds.min.css",
           package = "uswebr"

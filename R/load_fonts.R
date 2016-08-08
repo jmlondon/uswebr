@@ -3,7 +3,7 @@ load_fonts <- function() {
                          "templates",
                          "usweb",
                          "resources",
-                         "uswds-0.10.0",
+                         "uswds-0.11.0",
                          "fonts",
                          package = 'uswebr'))
   sysfonts::font.add("Source Sans Pro",
