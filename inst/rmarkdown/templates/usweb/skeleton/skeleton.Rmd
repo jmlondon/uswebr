@@ -15,7 +15,7 @@ address:
 - code: 2
   address: Division, Agency, City, State, Country 
   email: second.author@noaa.gov
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+date: "`r format(Sys.Date(), '%d %B, %Y')`"
 disclaimer: >
   The scientific results and conclusions, as well as any views or opinions 
   expressed herein, are those of the author(s) and do not necessarily reflect 
