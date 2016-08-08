@@ -12,7 +12,8 @@ Depends:
 Imports:
     rmarkdown,
     knitr,
-    sysfonts
+    sysfonts,
+    showtext
 License: CC0 | file LICENSE
 LazyData: TRUE
 RoxygenNote: 5.0.1

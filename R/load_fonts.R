@@ -10,5 +10,6 @@ load_fonts <- function() {
            regular = "sourcesanspro-regular-webfont.ttf")
   sysfonts::font.add("Merriweather",
            regular = "merriweather-regular-webfont.ttf")
+  showtext::showtext.auto()
   invisible()
 }
