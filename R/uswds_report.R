@@ -12,13 +12,26 @@ uswds_report <- function(toc = FALSE,
                          ...) {
 
   uswebr:::load_fonts()
+  if (.Platform$OS.type == "unix") {
   ggplot2::theme_set(ggplot2::theme_grey(
-    base_family = "Source Sans Pro") +
+    base_family = "Source Sans Pro",
+    base_size = 14) +
       ggplot2::theme(plot.title =
                        ggplot2::element_text(
                          family = "Merriweather",
                          face = "bold",
                          margin = ggplot2::margin(b = 20))))
+  }
+  if (.Platform$OS.type == "windows") {
+    ggplot2::theme_set(ggplot2::theme_grey(
+      base_family = "Source Sans Pro",
+      base_size = 18) +
+        ggplot2::theme(plot.title =
+                         ggplot2::element_text(
+                           family = "Merriweather",
+                           face = "bold",
+                           margin = ggplot2::margin(b = 20))))
+  }
 
   template = system.file("rmarkdown",
                          "templates",
