@@ -25,7 +25,7 @@ uswds_report <- function(toc = FALSE,
   if (.Platform$OS.type == "windows") {
     ggplot2::theme_set(ggplot2::theme_grey(
       base_family = "Source Sans Pro",
-      base_size = 18) +
+      base_size = 26) +
         ggplot2::theme(plot.title =
                          ggplot2::element_text(
                            family = "Merriweather",
