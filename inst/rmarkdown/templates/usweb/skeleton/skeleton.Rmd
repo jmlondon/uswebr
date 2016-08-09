@@ -47,7 +47,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nunc enim, accum
 
 Notice in the plot below, the use of `fig.showtext=TRUE`. This is required in order to match fonts (Merriweather and Source Sans Pro) used in the document with your ggplots.
 
-```{r plot-1}
+```{r plot-1, fig.showtext=TRUE}
 library(ggplot2)
 p <- ggplot(mtcars, aes(mpg, wt)) +
   geom_point() + ggtitle("MPG vs Weight from mtcars")
