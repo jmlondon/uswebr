@@ -10,12 +10,15 @@ uswds_report <- function(toc = FALSE,
                          css = NULL,
                          fig_width = 8,
                          ...) {
+
   uswebr:::load_fonts()
   ggplot2::theme_set(ggplot2::theme_grey(
     base_family = "Source Sans Pro") +
       ggplot2::theme(plot.title =
                        ggplot2::element_text(
-                         family = "Merriweather")))
+                         family = "Merriweather",
+                         face = "bold",
+                         margin = ggplot2::margin(b = 20))))
 
   template = system.file("rmarkdown",
                          "templates",

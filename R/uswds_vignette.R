@@ -15,7 +15,9 @@ uswds_vignette <- function(toc = FALSE,
     base_family = "Source Sans Pro") +
       ggplot2::theme(plot.title =
                        ggplot2::element_text(
-                         family = "Merriweather")))
+                         family = "Merriweather",
+                         face = "bold",
+                         margin = ggplot2::margin(b = 20))))
 
   template = system.file("rmarkdown",
                          "templates",
