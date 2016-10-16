@@ -12,7 +12,7 @@ uswds_report <- function(toc = FALSE,
                          ...) {
 
   uswebr:::load_fonts()
-  if (.Platform$OS.type == "unix") {
+  if (.Platform$OS.type == "unix" && Sys.info()["sysname"] == "Darwin") {
   ggplot2::theme_set(ggplot2::theme_grey(
     base_family = "Source Sans Pro",
     base_size = 14) +
@@ -21,6 +21,16 @@ uswds_report <- function(toc = FALSE,
                          family = "Merriweather",
                          face = "bold",
                          margin = ggplot2::margin(b = 20))))
+  }
+  if (.Platform$OS.type == "unix" && Sys.info()["sysname"] != "Darwin") {
+    ggplot2::theme_set(ggplot2::theme_grey(
+      base_family = "Source Sans Pro",
+      base_size = 26) +
+        ggplot2::theme(plot.title =
+                         ggplot2::element_text(
+                           family = "Merriweather",
+                           face = "bold",
+                           margin = ggplot2::margin(b = 20))))
   }
   if (.Platform$OS.type == "windows") {
     ggplot2::theme_set(ggplot2::theme_grey(
