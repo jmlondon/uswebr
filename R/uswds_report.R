@@ -22,10 +22,10 @@ uswds_report <- function(toc = FALSE,
                          face = "bold",
                          margin = ggplot2::margin(b = 20))))
   }
-  if (.Platform$OS.type == "unix" && Sys.info()["sysname"] != "Darwin") {
+  if (Sys.info()["sysname"] == "Linux") {
     ggplot2::theme_set(ggplot2::theme_grey(
       base_family = "Source Sans Pro",
-      base_size = 32) +
+      base_size = 26) +
         ggplot2::theme(plot.title =
                          ggplot2::element_text(
                            family = "Merriweather",
