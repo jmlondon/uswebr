@@ -94,7 +94,7 @@ if (.Platform$OS.type == "windows") {
       package = 'uswebr'
     )
 
-  base_format <- rmarkdown::html_document(
+  base_format <- bookdown::html_document2(
     toc = toc,
     theme = NULL,
     css = css,

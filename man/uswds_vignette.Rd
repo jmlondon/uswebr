@@ -13,4 +13,3 @@ R Markdown output format to pass to \code{\link{render}}
 A USWDS styled vignette is a lightweight version of html_document with based on
 the US Web Design Standards
 }
-

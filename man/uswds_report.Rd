@@ -13,4 +13,3 @@ R Markdown output format to pass to \code{\link{render}}
 A USWDS report is a version of html_document with support for scientific
 reports and based on the US Web Design Standards
 }
-
