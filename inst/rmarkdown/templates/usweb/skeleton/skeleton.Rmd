@@ -31,7 +31,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nunc enim, accum
 
 ## Methods and Analysis
 
-This template includes support for inline Mathjax equations. For example, we can specify equations such as $y_i = \alpha + \beta x_i + e_i$. But, unfortunately, we cannot currently specify centered forumla for more complex equations within this template. Hopefully, we'll sort out a solution to this soon. 
+This template includes support for inline Mathjax equations. For example, we can specify equations such as $y_i = \alpha + \beta x_i + e_i$. We can also specify centered forumla for more complex equations. 
 
 $$
   \int_0^\infty e^{-x^2} dx=\frac{\sqrt{\pi}}{2}
@@ -41,11 +41,17 @@ $$
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nunc enim, accumsan vel ante a, faucibus convallis lorem. Quisque sit amet tellus molestie, eleifend justo eu, dapibus diam. Suspendisse suscipit neque id sapien semper fermentum ac nec dui. Maecenas porttitor ligula ligula, a laoreet ex congue sed. Mauris in egestas elit. Curabitur ut tellus vel lacus maximus elementum. Cras et bibendum libero, nec pellentesque risus. Integer suscipit sodales nulla, ullamcorper faucibus erat aliquet et. Donec condimentum nisl at enim gravida consectetur. Sed luctus eleifend lorem, quis tempor nisi lacinia at. Quisque sodales semper orci, eu aliquam enim sagittis eget.
 
+```{r table-1}
+knitr::kable(head(iris))
+```
+
 ## Plots
 
-Notice in the plot below, the use of `fig.showtext=TRUE`. This is required in order to match fonts (Merriweather and Source Sans Pro) used in the document with your ggplots.
+Currently, ggplots are not set to use the report font families (Source Sans Pro
+and Merriweather). Users will need to set font families for ggplot outside of the
+package.
 
-```{r plot-1, fig.showtext=TRUE}
+```{r plot-1}
 library(ggplot2)
 p <- ggplot(mtcars, aes(mpg, wt)) +
   geom_point() + ggtitle("MPG vs Weight from mtcars")
