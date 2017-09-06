@@ -2,14 +2,15 @@
 % Please edit documentation in R/uswds_report.R
 \name{uswds_report}
 \alias{uswds_report}
-\title{Output a USWDS scientific report.}
+\title{Output a USWDS scientific report (deprecated).}
 \usage{
-uswds_report(toc = FALSE, css = NULL, fig_width = 8, ...)
+uswds_report(...)
 }
 \value{
-R Markdown output format to pass to \code{\link{render}}
+a message about the function being deprecated
 }
 \description{
 A USWDS report is a version of html_document with support for scientific
-reports and based on the US Web Design Standards
+reports and based on the US Web Design Standards. This is now deprecated.
+Use uswebr::html_uswds() instead
 }
