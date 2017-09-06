@@ -25,7 +25,6 @@
 html_uswds <- function( highlight = NULL,
                         css = NULL,
                         keep_md = FALSE,
-                        readme = FALSE,
                         ...) {
 
   ## Directories for resources
@@ -52,18 +51,6 @@ html_uswds <- function( highlight = NULL,
   ## Merge user-supplied CSS file
   if (!is.null(css)) {
     file.append(final_css, css)
-  }
-
-  ## Borrowed from html_vignette()
-  pre_knit <- function(input, ...) {
-    if (readme) {
-      rmarkdown::render(input,
-                        output_format = "github_document",
-                        output_options = list(html_preview = FALSE),
-                        output_file = "README.md",
-                        output_dir = dirname(dirname(input)),
-                        quiet = TRUE)
-    }
   }
 
   ## Hook function, invoked after document is knitted (so we know files_dir)
@@ -102,14 +89,15 @@ html_uswds <- function( highlight = NULL,
     pandoc = NULL,
     keep_md = keep_md,
     clean_supporting = clean_supporting,
-    pre_knit = pre_knit,
     pre_processor = pre_processor,
     ## Here `css` is set to NULL, but
     ## it will be set in the pre_processor() hook
-    base_format = rmarkdown::html_document(
+    base_format = bookdown::html_document2(
                                            css = NULL,
                                            theme = NULL,
                                            highlight = "pygments",
+                                           fig_caption = TRUE,
+                                           split_by = "none",
                                            ...)
   )
 

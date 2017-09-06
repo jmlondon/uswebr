@@ -4,8 +4,7 @@
 \alias{html_uswds}
 \title{HTML Output Based on the US Web Design Standards}
 \usage{
-html_uswds(highlight = NULL, css = NULL, keep_md = FALSE,
-  readme = FALSE, ...)
+html_uswds(highlight = NULL, css = NULL, keep_md = FALSE, ...)
 }
 \arguments{
 \item{css}{Additional CSS file to be \strong{merged} in the document. It will

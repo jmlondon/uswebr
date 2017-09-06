@@ -2,7 +2,7 @@
 uswebr
 ======
 
-An R package that includes an RMarkdown template (currently) targeted for scientific reports and documentation. The look and feel is based on the [US Digital Web Standards](https://playbook.cio.gov/designstandards/) developed by the [US Digital Service](https://www.whitehouse.gov/digital/united-states-digital-service) and [18F](https://18f.gsa.gov/).
+An R package that includes an RMarkdown template (currently) targeted for scientific reports and documentation using the `bookdown` package's `html_document2` function. The look and feel is based on the [US Digital Web Standards](https://playbook.cio.gov/designstandards/) developed by the [US Digital Service](https://www.whitehouse.gov/digital/united-states-digital-service) and [18F](https://18f.gsa.gov/).
 
 Install
 -------
@@ -34,14 +34,16 @@ Example yaml header for RMarkdown
     - code: 2
       address: Division, Agency, City, State, Country 
       email: second.author@noaa.gov
-    date: "05 September, 2017"
+    date: "06 September, 2017"
     disclaimer: >
       The scientific results and conclusions, as well as any views or opinions 
       expressed herein, are those of the author(s) and do not necessarily reflect 
       those of NOAA or the Department of Commerce.
     abstract: >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nunc enim, accumsan vel ante a, faucibus convallis lorem. Quisque sit amet tellus molestie, eleifend justo eu, dapibus diam. Suspendisse suscipit neque id sapien semper fermentum ac nec dui. Maecenas porttitor ligula ligula, a laoreet ex congue sed. Mauris in egestas elit. Curabitur ut tellus vel lacus maximus elementum. Cras et bibendum libero, nec pellentesque risus. Integer suscipit sodales nulla, ullamcorper faucibus erat aliquet et. Donec condimentum nisl at enim gravida consectetur. Sed luctus eleifend lorem, quis tempor nisi lacinia at. Quisque sodales semper orci, eu aliquam enim sagittis eget.
-    output: uswebr::html_uswds
+    output: 
+      uswebr::html_uswds:
+        number_sections: FALSE
     ---
 
 ------------------------------------------------------------------------
