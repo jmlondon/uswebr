@@ -13,7 +13,7 @@ To install the development version from github, use the **devtools** package,
 
 ``` r
 library("devtools")
-install_github("jmlondon/uswebr")
+install_github("jmlondon/uswebr", ref="devel")
 ```
 
 Example yaml header for RMarkdown
