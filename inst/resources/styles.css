@@ -117,3 +117,10 @@ footer {
   padding-top: 0;
 }
 
+blockquote {
+  background: #e4e2e0;
+  border-left: 5px solid #494440;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  font-size: 92%;
+}
