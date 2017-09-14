@@ -61,6 +61,7 @@ code[class] {
 
 .title {
   border-bottom: 1px solid #323a45;
+  font-size: 42px;
 }
 
 .author {
@@ -96,11 +97,14 @@ address p {
 }
 
 table {
-  display: block;
+  width: 100%;
+  font-size: 92%;
 }
 
 table td, table th {
-    font-size: 90%;
+  font-size: 92%;
+  border-left: none;
+  border-right: none;
 }
 
 footer {
@@ -125,6 +129,21 @@ blockquote {
   margin-left: 20px;
   margin-right: 0px;
   position: relative;
-  font-size: 85%;
+  font-size: 92%;
   color: #494440;
+}
+
+p.caption {
+  font-size: 92%;
+  color: #5b616b;
+  margin-bottom: 5rem;
+}
+
+caption {
+  color: #5b616b;
+  margin-bottom: 3rem;
+}
+
+.figure {
+  margin-top: 5rem;
 }
