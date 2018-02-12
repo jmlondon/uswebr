@@ -61,7 +61,7 @@ code[class] {
 
 .title {
   border-bottom: 1px solid #323a45;
-  font-size: 42px;
+  font-size: 36px;
 }
 
 .author {
@@ -72,6 +72,7 @@ code[class] {
   margin-top: 0.75rem;
   margin-bottom: 1rem;
   color: #5b616b;
+  font-size: 28px;
 }
 
 .compile-date {

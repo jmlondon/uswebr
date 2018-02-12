@@ -22,16 +22,16 @@
 #' @export
 #'
 #'
-html_uswds <- function( highlight = NULL,
+html_uswds <- function(highlight = NULL,
                         css = NULL,
                         keep_md = FALSE,
                         ...) {
 
   ## Directories for resources
-  css_dir  <- system.file("resources", "uswds-1.3.1","css",       package = "uswebr")
-  font_dir <- system.file("resources", "uswds-1.3.1","fonts",     package = "uswebr")
-  img_dir  <- system.file("resources", "uswds-1.3.1","img",       package = "uswebr")
-  js_dir   <- system.file("resources", "uswds-1.3.1","js",        package = "uswebr")
+  css_dir  <- system.file("resources", "uswds-1.4.5","css",       package = "uswebr")
+  font_dir <- system.file("resources", "uswds-1.4.5","fonts",     package = "uswebr")
+  img_dir  <- system.file("resources", "uswds-1.4.5","img",       package = "uswebr")
+  js_dir   <- system.file("resources", "uswds-1.4.5","js",        package = "uswebr")
   tmpl_dir <- system.file("rmarkdown", "templates","usweb", package = "uswebr")
 
   ## Obtain CSS files
