@@ -28,10 +28,10 @@ html_uswds <- function(highlight = NULL,
                         ...) {
 
   ## Directories for resources
-  css_dir  <- system.file("resources", "uswds-1.4.5","css",       package = "uswebr")
-  font_dir <- system.file("resources", "uswds-1.4.5","fonts",     package = "uswebr")
-  img_dir  <- system.file("resources", "uswds-1.4.5","img",       package = "uswebr")
-  js_dir   <- system.file("resources", "uswds-1.4.5","js",        package = "uswebr")
+  css_dir  <- system.file("resources", "uswds-1.6.3","css",       package = "uswebr")
+  font_dir <- system.file("resources", "uswds-1.6.3","fonts",     package = "uswebr")
+  img_dir  <- system.file("resources", "uswds-1.6.3","img",       package = "uswebr")
+  js_dir   <- system.file("resources", "uswds-1.6.3","js",        package = "uswebr")
   tmpl_dir <- system.file("rmarkdown", "templates","usweb", package = "uswebr")
 
   ## Obtain CSS files

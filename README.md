@@ -36,7 +36,7 @@ Example yaml header for RMarkdown
     - code: 2
       address: Division, Agency, City, State, Country 
       email: second.author@noaa.gov
-    date: "06 September, 2017"
+    date: "24 May, 2018"
     disclaimer: >
       The scientific results and conclusions, as well as any views or opinions 
       expressed herein, are those of the author(s) and do not necessarily reflect 
