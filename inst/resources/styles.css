@@ -1,7 +1,25 @@
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
 .usa-grid {
   max-width: 90ch;
   margin-left: auto;
   margin-right: auto;
+}
+
+button.usa-accordion-button {
+  font-weight: 400;
 }
 
 .usa-accordion button:focus,
@@ -61,18 +79,17 @@ code[class] {
 
 .title {
   border-bottom: 1px solid #323a45;
-  font-size: 36px;
 }
 
 .author {
   padding-bottom: 1rem;
+  font-weight: 400;
 }
 
 .subtitle {
   margin-top: 0.75rem;
   margin-bottom: 1rem;
   color: #5b616b;
-  font-size: 28px;
 }
 
 .compile-date {
@@ -135,12 +152,18 @@ blockquote {
 }
 
 p.caption {
-  font-size: 92%;
+  text-transform: uppercase;
   color: #5b616b;
   margin-bottom: 5rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 caption {
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+  text-transform: uppercase;
   color: #5b616b;
   margin-bottom: 3rem;
 }
