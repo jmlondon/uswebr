@@ -1,9 +1,9 @@
 Package: uswebr
 Type: Package
 Title: RMarkdown template based on the U.S. Web Design Standards
-Version: 1.5
+Version: 1.6
 Authors@R: person("Josh", "London", email = "josh.london@noaa.gov", role = c("aut", "cre"))
-Date: 2018-05-24
+Date: 2018-10-17
 Description: Rmarkdown template based on the U.S. Web Design Standards
     (https://playbook.cio.gov/designstandards/getting-started/) and customized
     for a typical scientific document.
@@ -15,4 +15,4 @@ Imports:
     knitr
 License: CC0 | file LICENSE
 LazyData: TRUE
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
