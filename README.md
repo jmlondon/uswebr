@@ -64,7 +64,7 @@ citable will be added to the top of the document.
 
 ------------------------------------------------------------------------
 
-\#\#\#\#\#Disclaimer
+##### Disclaimer
 
 <sub>This repository is a scientific product and is not official
 communication of the National Oceanic and Atmospheric Administration, or
