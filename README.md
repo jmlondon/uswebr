@@ -27,6 +27,30 @@ library("devtools")
 install_github("jmlondon/uswebr")
 ```
 
+Getting Started
+---------------
+
+Once the package is installed, the template can be initiated in a few
+ways. The easiest is to create a **New File …**, **R Markdown ..**
+within RStudio. The window that opens up will give the option to create
+the document **From Template**. Choose *Scientific Report (US Web Design
+Standards)* and a skeleton RMarkdown file will open up. At this point,
+you can use the skeleton as a guide and modify/knit as needed to
+customize.
+
+One can also adopt the US Web Design Standards look and feel for
+existing Rmarkdown files by simply including the following YAML:
+
+    output: 
+      uswebr::html_uswds:
+        number_sections: FALSE
+
+or, for a lighter weight vignette style:
+
+    output: 
+      uswebr::html_uswds_vignette:
+        number_sections: FALSE
+
 Example YAML header for RMarkdown
 ---------------------------------
 
@@ -54,7 +78,7 @@ citable will be added to the top of the document.
     - code: 2
       address: Division, Agency, City, State, Country 
       email: second.author@noaa.gov
-    date: "17 October, 2018"
+    date: "18 October, 2018"
     abstract: >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nunc enim, accumsan vel ante a, faucibus convallis lorem. Quisque sit amet tellus molestie, eleifend justo eu, dapibus diam. Suspendisse suscipit neque id sapien semper fermentum ac nec dui. Maecenas porttitor ligula ligula, a laoreet ex congue sed. Mauris in egestas elit. Curabitur ut tellus vel lacus maximus elementum. Cras et bibendum libero, nec pellentesque risus. Integer suscipit sodales nulla, ullamcorper faucibus erat aliquet et. Donec condimentum nisl at enim gravida consectetur. Sed luctus eleifend lorem, quis tempor nisi lacinia at. Quisque sodales semper orci, eu aliquam enim sagittis eget.
     output: 
