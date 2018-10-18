@@ -68,7 +68,7 @@ p code,
 li code,
 span code {
   border: 0;
-  background-color: #f1f1f1;
+  color: #046b99;
   border-radius: 1px;
   font-size: 85%;
 }
@@ -153,16 +153,16 @@ blockquote {
 
 p.caption {
   text-transform: uppercase;
+  font-size: 1.6rem;
   color: #5b616b;
   margin-bottom: 5rem;
-  margin-left: 4rem;
   margin-right: 4rem;
 }
 
 caption {
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   color: #5b616b;
   margin-bottom: 3rem;
