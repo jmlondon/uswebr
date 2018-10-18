@@ -87,14 +87,6 @@ else{
 }
 </script>
 
-<script>
-$$(document).ready(function(){
-    $$("#afil-button").click(function(){
-        $$("#collapsible-0").toggle();
-    });
-});
-</script>
-
 </head>
 
 <body>
@@ -107,15 +99,6 @@ $endfor$
 $if(date)$
 <p class="compile-date">compiled on $date$</p>
 <br />
-$endif$
-
-$if(draft)$
-<div class="usa-alert usa-alert-warning">
-    <div class="usa-alert-body">
-      <h4 class="usa-alert-heading">Draft Scientific Document</h4>
-      <p class="usa-alert-text">This document is under active development and subject to significant change at any time. Please do not cite or use the information in any form without contacting the author(s) for additional details.</p>
-    </div>
-  </div>
 $endif$
 
 $if(title)$
@@ -143,14 +126,9 @@ $endif$
     </h2>
 
 $if(address)$
-    <ul class="usa-accordion-bordered usa-unstyled-list">
+    <ul class="usa-unstyled-list">
       <li>
-    <button class="usa-accordion-button"
-      aria-expanded="false" aria-controls="afil-b-1">
-          Author Affiliation(s)
-        </button>
-        <div id="afil-b-1" class="usa-accordion-content">
-          <div class="author-afil">
+        <div class="author-afil">
         <ol id="address-list">
           $for(address)$
             <li data-id="$address.code$">$address.address$
@@ -159,7 +137,6 @@ $if(address)$
 			      </li>
 			   $endfor$
         </ol>
-        </div>
         </div>
       </li>
     </ul>
@@ -188,6 +165,7 @@ $body$
 $for(include-after)$
 $include-after$
 $endfor$
+
 
 $if(math)$
 <!-- dynamically load mathjax for compatibility with self-contained -->
