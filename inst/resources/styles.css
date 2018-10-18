@@ -59,17 +59,14 @@ pre code {
 }
 
 code {
-  border: 1px solid #dce4ef;
-  border-radius: 3px;
   line-height: 1.35em;
+  color: #046b99;
+  font-size: 92%;
 }
 
 p code,
 li code,
 span code {
-  border: 0;
-  color: #046b99;
-  border-radius: 1px;
   font-size: 85%;
 }
 
