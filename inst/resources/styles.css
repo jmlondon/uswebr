@@ -41,7 +41,10 @@ button.usa-accordion-button {
 
 tt, code, pre {
    font-family: 'Source Code Pro', monospace;
-   font-size: 92%;
+}
+
+p code, ui code,li code {
+  color: #2e8540;
 }
 
 pre {
@@ -58,20 +61,10 @@ pre code {
    margin-top: 0.5rem;
 }
 
-code {
-  line-height: 1.35em;
-  color: #046b99;
-  font-size: 92%;
-}
-
-p code,
-li code,
-span code {
-  font-size: 85%;
-}
-
 code[class] {
   background-color: #f1f1f1;
+  font-size: 85%;
+  line-height: 2.25rem;
 }
 
 .title {
