@@ -45,6 +45,11 @@ tt, code, pre {
 
 p code, ui code,li code {
   color: #2e8540;
+  font-size: 87%;
+  background-color: #f1f1f1;
+  padding-bottom: 0.15rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 pre {

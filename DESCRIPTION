@@ -1,7 +1,7 @@
 Package: uswebr
 Type: Package
 Title: RMarkdown template based on the U.S. Web Design Standards
-Version: 1.6
+Version: 1.0.0
 Authors@R: person("Josh", "London", email = "josh.london@noaa.gov", role = c("aut", "cre"))
 Date: 2018-10-17
 Description: Rmarkdown template based on the U.S. Web Design Standards

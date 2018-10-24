@@ -45,7 +45,7 @@ existing Rmarkdown files by simply including the following YAML:
       uswebr::html_uswds:
         number_sections: FALSE
 
-or, for a lighter weight vignette style:
+or, for a lighter weight vignette style (this is a beta implementation):
 
     output: 
       uswebr::html_uswds_vignette:
@@ -78,7 +78,7 @@ citable will be added to the top of the document.
     - code: 2
       address: Division, Agency, City, State, Country 
       email: second.author@noaa.gov
-    date: "18 October, 2018"
+    date: "24 October, 2018"
     abstract: >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nunc enim, accumsan vel ante a, faucibus convallis lorem. Quisque sit amet tellus molestie, eleifend justo eu, dapibus diam. Suspendisse suscipit neque id sapien semper fermentum ac nec dui. Maecenas porttitor ligula ligula, a laoreet ex congue sed. Mauris in egestas elit. Curabitur ut tellus vel lacus maximus elementum. Cras et bibendum libero, nec pellentesque risus. Integer suscipit sodales nulla, ullamcorper faucibus erat aliquet et. Donec condimentum nisl at enim gravida consectetur. Sed luctus eleifend lorem, quis tempor nisi lacinia at. Quisque sodales semper orci, eu aliquam enim sagittis eget.
     output: 

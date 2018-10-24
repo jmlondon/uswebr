@@ -49,7 +49,7 @@ output:
     number_sections: FALSE
 ```
 
-or, for a lighter weight vignette style:
+or, for a lighter weight vignette style (this is a beta implementation):
 
 ```
 output: 
