@@ -2,6 +2,8 @@
 uswebr
 ======
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1470831.svg)](https://doi.org/10.5281/zenodo.1470831)
+
 An R package that includes an RMarkdown template targeted for scientific
 reports and documentation using the `bookdown` package’s
 `html_document2()` function. The look and feel is based on the [US
@@ -15,6 +17,12 @@ scientific reports and manuscripts. Some of these changes may bring the
 produced reports, technically, out of 508 compliance. Plots and other
 elements added by the user should continue to follow accessiblity
 guidelines when possible.
+
+Please cite this package as:
+
+> London, Josh M. uswebr: R package/RMarkdown template based on the U.S.
+> Web Design Standards. 2018. Version 1.0.0.
+> <https://github.com/jmlondon/uswebr>. 10.5281/zenodo.1470831
 
 Install
 -------

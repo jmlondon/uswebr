@@ -1,0 +1,14 @@
+citHeader("To cite 'uswebr' in publications please reference as:")
+
+citEntry(entry = "Misc",
+  title        = "{uswebr}: R package/RMarkdown template based on the U.S. Web Design Standards",
+  author       = personList(as.person("Josh London")),
+  year         = "2018",
+  url          = "https://github.com/jmlondon/uswebr",
+  version      = "1.0.0",
+  textVersion =
+  paste("London, Josh M.",
+        "uswebr: R package/RMarkdown template based on the U.S. Web Design Standards.",
+        "2018. Version 1.0.0. https://github.com/jmlondon/uswebr.",
+        "10.5281/zenodo.1470831")
+)
